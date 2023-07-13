@@ -1,3 +1,55 @@
 body{
     background: url(../gestiondescontacts/img/wallpaperflare.com_wallpaper\(21\).jpg);
+    font-family: monospace;
+    color: white;
 }
+
+/* haut de ma page pour ma navbar */
+header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .logo img {
+    width: 200px;
+    height: 70px;
+  }
+  
+  .links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .links ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: xx-large;
+    padding: 0 90px;
+    text-align: center;
+  }
+  
+  .button {
+    margin-left: auto;
+  }
+  
+  .btn {
+    padding: 30px 50px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+  }
+  
