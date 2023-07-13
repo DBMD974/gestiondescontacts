@@ -53,3 +53,84 @@ header {
     text-decoration: none;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* mon footer */
+  footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    position: bottom fixed;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container p {
+    margin: 0;
+    color: darkblue;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
