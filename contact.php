@@ -28,6 +28,9 @@
   </nav>
 </header>
 
+<br>
+<br>
+
 <section>
 <table>
   <thead>
@@ -41,11 +44,13 @@
       <th>Ville</th>
       <th>Code Postal</th>
       <th>Pays</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
-    <?php if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
+    <?php
+    $Resultat = $test->select('contacts', '*'); //declaration et initialisation de variable
+    foreach ($Resultat as $row){ 
             ?>
             <tr>
               <td><?php echo $row['nom']; ?></td>
@@ -57,18 +62,40 @@
               <td><?php echo $row['ville']; ?></td>
               <td><?php echo $row['code_postal']; ?></td>
               <td><?php echo $row['pays']; ?></td>
+              <td>
+                <button class="btn-add" onclick="openModal()">Ajout</button>
+                <button class="btn-update">MAJ</button>
+                <button class="btn-delete">Supprimer</button>
+              </td>
             </tr>
         <?php }
-    } else {
+     {
         echo "<tr><td colspan='9'>Aucun contact trouvé.</td></tr>";
     } ?>
   </tbody>
 </table>
 
-<?php
+<!-- mon modale -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Ajouter un client</h2>
+    <form id="addForm">
+      <!-- Les champs du formulaire ici -->
+      <input type="text" name="nom" placeholder="Nom">
+      <input type="text" name="prenom" placeholder="Prénom">
+      <input type="email" name="email" placeholder="Email">
+      <input type="text" name="telephone" placeholder="Téléphone">
+      <!-- Ajoutez d'autres champs du formulaire si nécessaire -->
+      <button type="submit" class="btn-submit">Ajouter</button>
+    </form>
+  </div>
+</div>
+
+<!-- <?php
 // Fermeture de la connexion à la base de données
-$conn->close();
-?>
+$row->close();
+?> -->
 </section>
 
 
